@@ -5,6 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+      body {
+      background-image: url(./star1.jpg);
+
+    }
+
+    .container {
+      width: fit-content;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .slide {
+      height: 400px;
+      width: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .icons {
+      height: 80px;
+      position: absolute;
+      top: 40%;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .prev:hover {
+      transform: scale(0.8) translateX(-10px);
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .next:hover {
+      transform: scale(0.8) translateX(10px);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 18px;
+        padding: 0 10px;
+      }
+
+      .slide {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .icons {
+        height: 40px;
+      }
+    }
+</style>
 <body>
      <h1 style="text-align: center; color: white;">Explore the nature with nature lovers</h1>
   <div class="container">
