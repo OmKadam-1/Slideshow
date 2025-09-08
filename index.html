@@ -6,6 +6,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+     <h1 style="text-align: center; color: white;">Explore the nature with nature lovers</h1>
+  <div class="container">
+    <img src="nature.jpg" class="slide" id="slide" />
+
+    <img src="backward-con.png" class="icons prev" onclick="prev()" />
+    <img src="forward.png" class="icons next" onclick="next()" />
+  </div>
+
+  <script>
+    const images = [
+      "nature2.jpg",
+      "nature3.jpg",
+      "nature1.jpg",
+    ];
+
+    let index = 0;
+    const slide = document.getElementById("slide");
+
+    function next() {
+      if (index < images.length - 1) {
+        index++;
+      } else {
+        index = 0;
+      }
+
+      slide.src = images[index];
+    }
+    setInterval(next, 1000);
+    function prev() {
+      if (index > 0) {
+        index--;
+      } else {
+        index = images.length - 1;
+      }
+
+      slide.src = images[index];
+    }
+    setInterval(next, 1000);
+  </script>
 </body>
 </html>
